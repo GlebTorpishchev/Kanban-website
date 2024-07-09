@@ -1,0 +1,412 @@
+Invalid input
+Array
+(
+    [0] => Array
+        (
+            [column_id] => 549
+            [order] => 0
+        )
+
+    [1] => Array
+        (
+            [column_id] => 567
+            [order] => 1
+        )
+
+    [2] => Array
+        (
+            [column_id] => 562
+            [order] => 2
+        )
+
+    [3] => Array
+        (
+            [column_id] => 570
+            [order] => 3
+        )
+
+)
+Database connection failed: Access denied for user 'username'@'localhost' (using password: YES)
+Invalid input
+Array
+(
+    [0] => Array
+        (
+            [column_id] => 549
+            [order] => 0
+        )
+
+    [1] => Array
+        (
+            [column_id] => 567
+            [order] => 1
+        )
+
+    [2] => Array
+        (
+            [column_id] => 562
+            [order] => 2
+        )
+
+    [3] => Array
+        (
+            [column_id] => 570
+            [order] => 3
+        )
+
+)
+Database connection failed: Access denied for user 'username'@'localhost' (using password: YES)
+Invalid input
+Array
+(
+    [0] => Array
+        (
+            [column_id] => 549
+            [order] => 0
+        )
+
+    [1] => Array
+        (
+            [column_id] => 562
+            [order] => 1
+        )
+
+    [2] => Array
+        (
+            [column_id] => 567
+            [order] => 2
+        )
+
+    [3] => Array
+        (
+            [column_id] => 570
+            [order] => 3
+        )
+
+)
+Invalid input
+Array
+(
+    [0] => Array
+        (
+            [column_id] => 549
+            [order] => 0
+        )
+
+    [1] => Array
+        (
+            [column_id] => 567
+            [order] => 1
+        )
+
+    [2] => Array
+        (
+            [column_id] => 562
+            [order] => 2
+        )
+
+    [3] => Array
+        (
+            [column_id] => 570
+            [order] => 3
+        )
+
+)
+Invalid input
+Array
+(
+    [0] => Array
+        (
+            [column_id] => 549
+            [order] => 0
+        )
+
+    [1] => Array
+        (
+            [column_id] => 567
+            [order] => 1
+        )
+
+    [2] => Array
+        (
+            [column_id] => 562
+            [order] => 2
+        )
+
+    [3] => Array
+        (
+            [column_id] => 570
+            [order] => 3
+        )
+
+)
+Invalid input
+Array
+(
+    [0] => Array
+        (
+            [column_id] => 549
+            [order] => 0
+        )
+
+    [1] => Array
+        (
+            [column_id] => 567
+            [order] => 1
+        )
+
+    [2] => Array
+        (
+            [column_id] => 562
+            [order] => 2
+        )
+
+    [3] => Array
+        (
+            [column_id] => 570
+            [order] => 3
+        )
+
+)
+Array
+(
+    [0] => Array
+        (
+            [column_id] => 549
+            [order] => 0
+        )
+
+    [1] => Array
+        (
+            [column_id] => 567
+            [order] => 1
+        )
+
+    [2] => Array
+        (
+            [column_id] => 562
+            [order] => 2
+        )
+
+    [3] => Array
+        (
+            [column_id] => 570
+            [order] => 3
+        )
+
+)
+Invalid input
+Array
+(
+    [0] => Array
+        (
+            [column_id] => 549
+            [order] => 0
+        )
+
+    [1] => Array
+        (
+            [column_id] => 562
+            [order] => 1
+        )
+
+    [2] => Array
+        (
+            [column_id] => 567
+            [order] => 2
+        )
+
+    [3] => Array
+        (
+            [column_id] => 570
+            [order] => 3
+        )
+
+)
+Array
+(
+    [0] => Array
+        (
+            [column_id] => 549
+            [order] => 0
+        )
+
+    [1] => Array
+        (
+            [column_id] => 567
+            [order] => 1
+        )
+
+    [2] => Array
+        (
+            [column_id] => 562
+            [order] => 2
+        )
+
+    [3] => Array
+        (
+            [column_id] => 570
+            [order] => 3
+        )
+
+)
+Invalid input
+Array
+(
+    [0] => Array
+        (
+            [column_id] => 549
+            [order] => 0
+        )
+
+    [1] => Array
+        (
+            [column_id] => 567
+            [order] => 1
+        )
+
+    [2] => Array
+        (
+            [column_id] => 562
+            [order] => 2
+        )
+
+    [3] => Array
+        (
+            [column_id] => 570
+            [order] => 3
+        )
+
+)
+Array
+(
+    [0] => Array
+        (
+            [column_id] => 549
+            [order] => 0
+        )
+
+    [1] => Array
+        (
+            [column_id] => 567
+            [order] => 1
+        )
+
+    [2] => Array
+        (
+            [column_id] => 562
+            [order] => 2
+        )
+
+    [3] => Array
+        (
+            [column_id] => 570
+            [order] => 3
+        )
+
+)
+Invalid input
+Array
+(
+    [0] => Array
+        (
+            [column_id] => 549
+            [order] => 0
+        )
+
+    [1] => Array
+        (
+            [column_id] => 567
+            [order] => 1
+        )
+
+    [2] => Array
+        (
+            [column_id] => 562
+            [order] => 2
+        )
+
+    [3] => Array
+        (
+            [column_id] => 570
+            [order] => 3
+        )
+
+)
+Invalid input
+Array
+(
+    [0] => Array
+        (
+            [column_id] => 549
+            [order] => 0
+        )
+
+    [1] => Array
+        (
+            [column_id] => 567
+            [order] => 1
+        )
+
+    [2] => Array
+        (
+            [column_id] => 562
+            [order] => 2
+        )
+
+    [3] => Array
+        (
+            [column_id] => 570
+            [order] => 3
+        )
+
+)
+Invalid input
+Array
+(
+    [0] => Array
+        (
+            [column_id] => 549
+            [order] => 0
+        )
+
+    [1] => Array
+        (
+            [column_id] => 567
+            [order] => 1
+        )
+
+    [2] => Array
+        (
+            [column_id] => 562
+            [order] => 2
+        )
+
+)
+Invalid input
+Array
+(
+    [0] => Array
+        (
+            [column_id] => 549
+            [order] => 0
+        )
+
+    [1] => Array
+        (
+            [column_id] => 567
+            [order] => 1
+        )
+
+    [2] => Array
+        (
+            [column_id] => 562
+            [order] => 2
+        )
+
+    [3] => Array
+        (
+            [order] => 3
+        )
+
+)
