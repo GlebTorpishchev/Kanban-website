@@ -1,20 +1,11 @@
 version: '3.8'
+
 services:
-  php:
+  app:
     build:
-      context: ./back
+      context: .
     ports:
       - "80:80"
-    volumes:
-      - ./back:/var/www/html
-    networks:
-      - app-network
-
-  vue:
-    build:
-      context: ./board
-    ports:
-      - "3000:80"
     networks:
       - app-network
 
