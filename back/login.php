@@ -1,7 +1,7 @@
 <?php
 session_start(); // Start session handling
 
-header('Access-Control-Allow-Origin: http://localhost:3000'); // Разрешаем запросы только с конкретного домена
+header('Access-Control-Allow-Origin: https://kanban-website-production.up.railway.app'); // Разрешаем запросы только с конкретного домена
 header('Access-Control-Allow-Methods: POST, GET, OPTIONS'); // Разрешаем методы POST, GET и OPTIONS
 header('Access-Control-Allow-Headers: Content-Type'); // Разрешаем заголовок Content-Type
 header('Access-Control-Allow-Credentials: true'); // Разрешаем передачу учётных данных (куки, авторизация)
