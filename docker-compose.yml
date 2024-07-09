@@ -1,25 +1,16 @@
 version: '3.8'
 
 services:
-  app:
+  web:
     build:
       context: .
+      dockerfile: Dockerfile
     ports:
       - "80:80"
     networks:
       - app-network
-
-  mysql:
-    image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: mydatabase
-      MYSQL_USER: myuser
-      MYSQL_PASSWORD: mypassword
-    ports:
-      - "3306:3306"
-    networks:
-      - app-network
+      - VUE_APP_API_URL=https://kanban-website-production.up.railway.app
 
 networks:
   app-network:

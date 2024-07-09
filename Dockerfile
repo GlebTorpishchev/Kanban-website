@@ -1,11 +1,11 @@
 # Stage 1: Build the Vue.js app
-FROM node:16 AS build
+FROM node:lts-alpine AS build
 WORKDIR /app
 COPY board/ /app
 RUN npm install
 RUN npm run build
 
-# Stage 2: Setup the PHP app
+# Stage 2: Setup the PHP app with Apache
 FROM php:8.1-apache
 WORKDIR /var/www/html
 
@@ -35,6 +35,5 @@ Alias /board /var/www/html/board\n\
     a2enconf app && \
     a2enmod rewrite
 
-# Expose port 80
 EXPOSE 80
 CMD ["apache2-foreground"]
