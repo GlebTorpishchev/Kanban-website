@@ -150,7 +150,7 @@ export default {
         // Emit the updated column data to the parent component
         this.$emit('updateColumn', updatedColumn);
         // Immediately save the column name change to the backend
-        const response = await fetch('http://localhost/X-men/back/update_column.php', {
+        const response = await fetch('${process.env.VUE_APP_API_URL}/update_column.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -178,7 +178,7 @@ export default {
       };
       try {
         // Отправляем новый объект карточки на сервер для добавления в БД
-        const response = await fetch('http://localhost/X-men/back/create_card.php', {
+        const response = await fetch('${process.env.VUE_APP_API_URL}/create_card.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -202,7 +202,7 @@ export default {
     },
     async updateCard(cardIndex, newCard) {
         try {
-          const response = await fetch('http://localhost/X-men/back/update_card.php', {
+          const response = await fetch('${process.env.VUE_APP_API_URL}/update_card.php', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -223,7 +223,7 @@ export default {
       async deleteCard(cardIndex) {
         const cardId = this.localCards[cardIndex].card_id;
         try {
-          const response = await fetch('http://localhost/X-men/back/delete_card.php', {
+          const response = await fetch('${process.env.VUE_APP_API_URL}/delete_card.php', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -247,7 +247,7 @@ export default {
       }));
 
       try {
-        const response = await fetch('http://localhost/X-men/back/update_card_order.php', {
+        const response = await fetch('${process.env.VUE_APP_API_URL}/update_card_order.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -269,7 +269,7 @@ export default {
       const card = this.localCards[cardIndex];
       card.color = color;
       try {
-        const response = await fetch('http://localhost/X-men/back/update_card.php', {
+        const response = await fetch('${process.env.VUE_APP_API_URL}/update_card.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -306,7 +306,7 @@ export default {
     },
     async deleteColumn() {
       try {
-        const response = await fetch('http://localhost/X-men/back/delete_column.php', {
+        const response = await fetch('${process.env.VUE_APP_API_URL}/delete_column.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

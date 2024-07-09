@@ -66,7 +66,7 @@ export default {
     async saveCard() {
       const cardData = { ...this.card, name: this.localTitle, text: this.localDescription };
       try {
-        const response = await fetch('http://localhost/X-men/back/update_card.php', {
+        const response = await fetch('${process.env.VUE_APP_API_URL}/update_card.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -94,7 +94,7 @@ export default {
     async selectColor(color) {
       const cardData = { ...this.card, color: color };
       try {
-        const response = await fetch('http://localhost/X-men/back/update_card.php', {
+        const response = await fetch('${process.env.VUE_APP_API_URL}/update_card.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

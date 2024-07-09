@@ -49,7 +49,7 @@ export default {
     async handleLogin() {
       this.errorMessage = null;
       try {
-        const response = await fetch('http://localhost/X-men/back/login.php', {
+        const response = await fetch('${process.env.VUE_APP_API_URL}/login.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -43,7 +43,7 @@ export default {
           password: this.password,
           email: this.email
         });
-        const response = await fetch('http://localhost/X-men/back/register.php', {
+        const response = await fetch('${process.env.VUE_APP_API_URL}/register.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

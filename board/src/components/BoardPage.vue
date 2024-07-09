@@ -73,7 +73,7 @@ export default {
       const color = JSON.stringify(updatedColumn.color);
 
       try {
-        const response = await axios.post('http://localhost/X-men/back/update_column.php', {
+        const response = await axios.post('${process.env.VUE_APP_API_URL}/update_column.php', {
           id: updatedColumn.column_id,
           column_name: updatedColumn.column_name,
           color: color
@@ -105,7 +105,7 @@ export default {
   });
 
   try {
-    const response = await axios.post('http://localhost/X-men/back/update_card_order.php', updatedCards);
+    const response = await axios.post('${process.env.VUE_APP_API_URL}/update_card_order.php', updatedCards);
     if (response.data.success) {
       console.log('Порядок карточек успешно обновлен');
     } else {
@@ -151,7 +151,7 @@ export default {
       };
 
       try {
-        const response = await fetch('http://localhost/X-men/back/create_column.php', {
+        const response = await fetch('${process.env.VUE_APP_API_URL}/create_column.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -176,7 +176,7 @@ export default {
     async deleteColumn(index) {
       const column = this.columns[index];
       try {
-        const response = await fetch('http://localhost/X-men/back/delete_column.php', {
+        const response = await fetch('${process.env.VUE_APP_API_URL}/delete_column.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -200,7 +200,7 @@ export default {
         order: index
       }));
 
-      axios.post('http://localhost/X-men/back/update_column_order.php', reorderedColumns)
+      axios.post('${process.env.VUE_APP_API_URL}/update_column_order.php', reorderedColumns)
         .then(response => {
           if (response.data.success) {
             console.log('Column order successfully updated');
@@ -221,7 +221,7 @@ export default {
     },
     async fetchUserData() {
       try {
-        const response = await fetch("http://localhost/X-men/back/login.php", {
+        const response = await fetch("${process.env.VUE_APP_API_URL}/login.php", {
           method: 'GET',
           credentials: 'include',
         });
@@ -240,7 +240,7 @@ export default {
     async fetchColumns() {
       try {
         const userId = localStorage.getItem('userid');
-        const response = await fetch(`http://localhost/X-men/back/get_columns.php?user_id=${userId}`);
+        const response = await fetch(`${process.env.VUE_APP_API_URL}/get_columns.php?user_id=${userId}`);
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -270,7 +270,7 @@ export default {
 
         console.log('Updating cards order:', updatedCards); // Debugging log
 
-        const response = await axios.post('http://localhost/X-men/back/update_card_order.php', updatedCards);
+        const response = await axios.post('${process.env.VUE_APP_API_URL}/update_card_order.php', updatedCards);
 
         if (response.data.success) {
           console.log('Card order successfully updated');
