@@ -17,3 +17,9 @@ RUN npm run build
 
 EXPOSE 8080
 CMD [ "http-server", "dist" ]
+
+
+FROM php:8.1-apache
+WORKDIR /app
+COPY back/ /app
+RUN docker-php-ext-install mysqli
