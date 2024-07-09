@@ -1,55 +1,19 @@
-# # Stage 1: Build the Vue.js app
-# FROM node:16 AS build
-# WORKDIR /app
-# COPY board/ /app
-# RUN npm install
-# RUN npm run build
+FROM node:lts-alpine
 
-# # Stage 2: Setup the PHP app
-# FROM php:8.1-apache AS php
-# WORKDIR /var/www/html
-# COPY back/ /var/www/html
-# RUN docker-php-ext-install mysqli
+# install simple http server for serving static content
+RUN npm install -g http-server
 
-# # Stage 3: Serve the built Vue.js app and run PHP
-# FROM php:8.1-apache
-# WORKDIR /var/www/html
-
-# # Copy built Vue.js app to Apache document root
-# COPY --from=build /app/dist /var/www/html/board
-
-# # Copy PHP files to Apache document root
-# COPY --from=php /var/www/html /var/www/html/back
-
-# # Configure Apache to serve both Vue.js and PHP
-# RUN echo "Alias /board /var/www/html/board\n\
-# <Directory /var/www/html/board>\n\
-#     Options Indexes FollowSymLinks\n\
-#     AllowOverride All\n\
-#     Require all granted\n\
-# </Directory>\n\
-# \n\
-# <Directory /var/www/html/back>\n\
-#     Options Indexes FollowSymLinks\n\
-#     AllowOverride All\n\
-#     Require all granted\n\
-# </Directory>" > /etc/apache2/conf-available/app.conf && \
-#     a2enconf app && \
-#     a2enmod rewrite
-
-# # Expose port 80
-# EXPOSE 80
-# CMD ["apache2-foreground"]
-
-FROM debian:stable
+# make the 'app' folder the current working directory
 WORKDIR /app
-COPY board/ /app
-RUN apt-get update; apt-get install curl gpg -y; \
-mkdir -p /etc/apt/keyrings; \
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg; \
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list; \
- apt-get update && apt-get install -y nodejs;
 
+# copy project files and folders to the current working directory (i.e. 'app' folder)
+COPY board /app
+
+# install project dependencies
 RUN npm install
-EXPOSE 80
-CMD ["npm run serve -- --port 80"]
+
+# build app for production with minification
+RUN npm run build
+
+EXPOSE 8080
+CMD [ "http-server", "dist" ]
