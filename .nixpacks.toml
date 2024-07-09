@@ -1,8 +1,0 @@
-[phases.install]
-commands = ["cd board && npm install", "cd back && composer install"]
-
-[phases.build]
-commands = ["cd board && npm run build"]
-
-[phases.start]
-commands = ["cd back && php -S 0.0.0.0:8000", "cd board && npm run serve"]
